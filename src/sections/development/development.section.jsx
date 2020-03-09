@@ -3,7 +3,7 @@ import "./development.styles.scss";
 
 import node from "../../assets/node.png";
 import redux from "../../assets/redux.png";
-import photoshop from "../../assets/photoshop.png";
+import brain from "../../assets/brain.png";
 import growth from "../../assets/increase.png";
 
 class Development extends Component {
@@ -68,26 +68,25 @@ class Development extends Component {
               </div>
             </div>
             <div className="box" id="photoshop">
-              <img src={photoshop} alt="photoshop" />
+              <img src={brain} alt="brain" />
               <div className="description">
-                <h1 className="name">Photoshop</h1>
+                <h1 className="name">Rozwój umysłu</h1>
                 <p className="text">
-                  Oprócz tego oczywiście cały czas rozwijam umiejętności
-                  wymienione w sekcji wyżej, ponadto dbam o rozwój swojej
-                  kreatywności, myślenia poza schematami, a także umiejętności
-                  miękkich.
+                  Regularnie pracuję nad rozwojem swojej kreatywności, myślenia
+                  abstrakcyjnego i wychodzenia poza schematy. Staram się także
+                  ćwiczyć swoje umiejętności miękkie.
                 </p>
               </div>
             </div>
             <div className="box" id="growth">
               <img src={growth} alt="growth" />
               <div className="description">
-                <h1 className="name">Inne</h1>
+                <h1 className="name">Na tym nie koniec</h1>
                 <p className="text">
                   Oprócz tego oczywiście cały czas rozwijam umiejętności
-                  wymienione w sekcji wyżej, ponadto dbam o rozwój swojej
-                  kreatywności, myślenia poza schematami, a także umiejętności
-                  miękkich.
+                  wymienione w sekcji wyżej, w przyszłości planuję znacznie
+                  poszerzyć swój wachlarz umiejętności wiele technologii, takich
+                  jak np. Python czy Angular.
                 </p>
               </div>
             </div>
