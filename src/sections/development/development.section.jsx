@@ -27,12 +27,16 @@ class Development extends Component {
         }
 
         if (window.scrollY - window.innerHeight - 600 > photoshop.offsetTop) {
-          photoshop.style.opacity = "1";
-          photoshop.style.transform = "none";
+          setTimeout(() => {
+            photoshop.style.opacity = "1";
+            photoshop.style.transform = "none";
+          }, 250);
         }
         if (window.scrollY - window.innerHeight - 600 > growth.offsetTop) {
-          growth.style.opacity = "1";
-          growth.style.transform = "none";
+          setTimeout(() => {
+            growth.style.opacity = "1";
+            growth.style.transform = "none";
+          }, 250);
         }
       },
       false
