@@ -1,0 +1,14 @@
+.skill-list-desktop {
+  display: flex;
+  width: 100%;
+  transition: all 0.75s ease;
+  transform: translateY(300px);
+  opacity: 0;
+  margin-top: 1.5rem;
+
+  .list {
+    display: flex;
+    position: absolute;
+    padding: 0 4rem;
+  }
+}

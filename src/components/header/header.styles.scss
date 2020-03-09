@@ -1,0 +1,178 @@
+@import "../../assets/hamburgers/hamburgers.scss";
+$main-color: #f73859;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 46rem;
+  height: 4rem;
+  color: rgb(184, 184, 184);
+  box-sizing: border-box;
+  z-index: 1;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+
+    img {
+      margin-left: 0.5rem;
+      height: 1rem;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .menu-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-size: 0.6rem;
+    margin: 0;
+
+    li {
+      margin: 0 0.25rem;
+      letter-spacing: 0.03rem;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .main-color-background {
+      background-color: $main-color;
+      color: white;
+      padding: 0.25rem 0.4rem;
+      border-radius: 0.2rem;
+
+      &:hover {
+        background-color: #fff;
+        color: $main-color;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .main-color {
+    color: $main-color;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: 1600px) and (max-height: 900px) {
+  .header {
+    width: 38rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (max-height: 900px) {
+  .header {
+    width: 36rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .header {
+    width: 100%;
+    padding: 0 2.5rem;
+    height: 6.5rem;
+    transition: all 0.5s ease;
+
+    .menu-list {
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100vh;
+      padding: 6rem 0;
+      font-size: 1rem;
+      width: 100%;
+      color: white;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.5s ease;
+
+      li {
+        opacity: 0;
+        transition: all 0.75s ease;
+      }
+
+      .main-color {
+        color: white;
+        background-color: transparent;
+        padding: 0;
+      }
+
+      .main-color-background {
+        color: white;
+        background-color: transparent;
+        padding: 0;
+
+        &:hover {
+          color: white;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .menu-list-active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .hamburger {
+      display: block;
+      z-index: 5;
+    }
+  }
+
+  .black-bgc {
+    transition: all 0.5s ease;
+
+    .menu-list {
+      background-color: #103452;
+    }
+
+    .logo {
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .header {
+    .menu-list {
+      padding: 5rem 0;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 823px) {
+  .header {
+    padding: 0.5rem;
+    align-items: flex-start;
+    height: 4rem;
+    transition: all 0.5s ease;
+
+    .menu-list {
+      padding: 0;
+      padding-top: 4rem;
+      font-size: 0.9rem;
+      padding-bottom: 6rem;
+      transition: all 0.5s ease;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+$main-color: #283149;
+$main-color: #6c7b95;
+
+.development {
+  width: 100%;
+  padding: 2rem 10rem;
+  position: relative;
+  background-color: $main-color;
+  color: white;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background-image: url("../../assets/bg-development.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(1) brightness(0.2);
+    opacity: 0.5;
+  }
+
+  * {
+    z-index: 1;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    .headline {
+      width: fit-content;
+      padding: 1rem;
+      padding: {
+        left: 0;
+        top: 0;
+      }
+      border-bottom: solid 2px white;
+      font-size: 1.2rem;
+      color: white;
+      z-index: 1;
+    }
+
+    .about-learning {
+      width: 20rem;
+      margin: 2rem;
+      font-size: 0.55rem;
+      text-align: center;
+    }
+
+    .new-skills {
+      width: 100%;
+      margin: 2rem 0;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+
+      #node,
+      #photoshop {
+        transform: translate(-600px);
+        opacity: 0;
+      }
+
+      #redux,
+      #growth {
+        transform: translate(600px);
+        opacity: 0;
+      }
+
+      .box {
+        width: 22rem;
+        display: flex;
+        align-items: center;
+        transition: all 0.75s ease;
+        margin: 2rem 0;
+
+        img {
+          height: auto;
+          width: 3rem;
+          margin: 0 2rem;
+          filter: brightness(0) invert(1);
+        }
+
+        .description {
+          width: 20rem;
+          .name {
+            font-size: 0.8rem;
+            color: white;
+          }
+
+          .text {
+            font-size: 0.5rem;
+            line-height: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) and (max-height: 900px) {
+  .development {
+    padding: 2rem 8rem;
+
+    .content .new-skills .box {
+      width: 18rem;
+
+      img {
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) and (max-height: 900px) {
+  .development {
+    padding: 2rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (max-height: 800px) {
+  .development {
+    padding: 2rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .development {
+    padding: 2rem;
+    height: auto;
+
+    .content {
+      .new-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .box {
+          width: 100%;
+          justify-content: center;
+          margin: 1.25rem 0;
+
+          .description {
+            margin: 0 1rem;
+
+            .name {
+              font-size: 0.7rem;
+              color: white;
+            }
+
+            .text {
+              width: 20rem;
+              font-size: 0.5rem;
+              line-height: 0.8rem;
+            }
+          }
+
+          img {
+            width: 3.5rem;
+            height: auto;
+            margin: 0 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .development {
+    padding: 1rem 2rem;
+    height: auto;
+
+    .content {
+      .new-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .box {
+          width: 100%;
+          justify-content: center;
+          margin: 1.25rem 0;
+
+          .description {
+            margin: 0 1rem;
+
+            .name {
+              font-size: 0.7rem;
+              color: white;
+            }
+
+            .text {
+              width: 20rem;
+              font-size: 0.53rem;
+              line-height: 0.8rem;
+            }
+          }
+
+          img {
+            width: 3.5rem;
+            height: auto;
+            margin: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 823px) {
+  .development {
+    padding: 1rem;
+
+    .background {
+      background-attachment: initial;
+      background-position: center;
+    }
+
+    .content {
+      .headline {
+        font-size: 0.9rem;
+        padding-bottom: 0.75rem;
+        border-width: 1px;
+      }
+
+      .new-skills {
+        .box {
+          flex-direction: column;
+          align-content: center;
+          justify-content: center;
+          width: 100%;
+          margin: 1.5rem 0;
+
+          .description {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .text {
+              width: 100%;
+              text-align: center;
+            }
+          }
+
+          img {
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
