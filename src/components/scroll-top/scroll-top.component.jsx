@@ -7,7 +7,16 @@ import arrow from "../../assets/top.png";
 
 class ScrollTop extends Component {
   scrollToTop = () => {
-    $("html, body").animate({ scrollTop: 0 }, 750, "linear");
+    let isChrome = false;
+    if (window.chrome && !window.opr) {
+      isChrome = true;
+    }
+
+    if (isChrome) {
+      $("html, body").animate({ scrollTop: 0 }, 0, "swing");
+    } else {
+      $("html, body").animate({ scrollTop: 0 }, 750, "swing");
+    }
   };
 
   componentDidMount = () => {

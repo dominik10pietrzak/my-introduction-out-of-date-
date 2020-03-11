@@ -9,10 +9,16 @@ class MyInterests extends Component {
     const container = document.querySelector(".my-interests .container");
     const MyInterests = document.querySelector(".my-interests");
 
+    let additionalHeight =
+      window.innerWidth <= 1024 && window.innerHeight <= 1366 ? 500 : 850;
+
     window.addEventListener(
       "scroll",
       () => {
-        if (window.scrollY + window.innerHeight - 750 > MyInterests.offsetTop) {
+        if (
+          window.scrollY + window.innerHeight - additionalHeight >
+          MyInterests.offsetTop
+        ) {
           container.classList.add("swipe");
         }
       },

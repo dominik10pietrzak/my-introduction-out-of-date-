@@ -10,6 +10,7 @@ $main-color: #f73859;
   color: rgb(184, 184, 184);
   box-sizing: border-box;
   z-index: 1;
+  transition: all 0.3s ease;
 
   .logo {
     display: flex;

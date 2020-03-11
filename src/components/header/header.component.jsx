@@ -9,16 +9,20 @@ import screen from "../../assets/web-pink.png";
 let isActive = false;
 
 const scrollToSection = section => {
-  $("html, body").animate(
-    { scrollTop: $(section).offset().top },
-    750,
-    "linear"
-  );
+  let isChrome = false;
+  if (window.chrome && !window.opr) {
+    isChrome = true;
+  }
 
-  // window.scrollTo({
-  //   top: target.offsetTop,
-  //   behavior: "smooth"
-  // });
+  if (isChrome) {
+    $("html, body").animate({ scrollTop: $(section).offset().top }, 0, "swing");
+  } else {
+    $("html, body").animate(
+      { scrollTop: $(section).offset().top },
+      750,
+      "swing"
+    );
+  }
 
   if (window.innerWidth <= 1024 && window.innerHeight <= 1366) {
     handleMenuClick();

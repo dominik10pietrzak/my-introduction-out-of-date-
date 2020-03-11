@@ -15,10 +15,10 @@ class Opening extends Component {
       const header = document.querySelector(".header");
       let scrollPosition = window.pageYOffset;
 
-      if (scrollPosition > 500) {
+      if (scrollPosition > 300) {
         header.style.transform = "translateY(-200px)";
       }
-      if (scrollPosition < 100) {
+      if (scrollPosition === 0) {
         header.style.transform = "none";
       }
     });
