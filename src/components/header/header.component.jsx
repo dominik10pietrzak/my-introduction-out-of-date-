@@ -19,7 +19,7 @@ const scrollToSection = section => {
   } else {
     $("html, body").animate(
       { scrollTop: $(section).offset().top },
-      750,
+      "slow",
       "swing"
     );
   }

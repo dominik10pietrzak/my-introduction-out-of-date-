@@ -4,10 +4,19 @@
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
   cursor: pointer;
-
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
+  box-shadow: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0;
+  }
 
   // Normalize (<button>)
   font: inherit;
@@ -19,10 +28,11 @@
   overflow: visible;
 
   &:hover {
+    box-shadow: 0;
+
     @if $hamburger-hover-use-filter == true {
       filter: $hamburger-hover-filter;
-    }
-    @else {
+    } @else {
       opacity: $hamburger-hover-opacity;
     }
   }
@@ -31,10 +41,10 @@
     &:hover {
       @if $hamburger-hover-use-filter == true {
         filter: $hamburger-active-hover-filter;
-      }
-      @else {
+      } @else {
         opacity: $hamburger-active-hover-opacity;
       }
+      box-shadow: 0;
     }
 
     .hamburger-inner,
