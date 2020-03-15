@@ -43,7 +43,7 @@ const handleMenuClick = () => {
     for (let i = 0; i < listElements.length; i++) {
       setTimeout(() => {
         listElements[i].style.opacity = "1";
-      }, i * 125);
+      }, i * 75);
     }
     window.scrollTo(0, 0);
   } else if (!isActive) {
