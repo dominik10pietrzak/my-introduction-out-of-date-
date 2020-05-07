@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/my-introduction/static/css/main.29d49adb.chunk.css",
-    "main.js": "/my-introduction/static/js/main.ae9488bc.chunk.js",
-    "main.js.map": "/my-introduction/static/js/main.ae9488bc.chunk.js.map",
+    "main.css": "/my-introduction/static/css/main.354e0f70.chunk.css",
+    "main.js": "/my-introduction/static/js/main.075f22bf.chunk.js",
+    "main.js.map": "/my-introduction/static/js/main.075f22bf.chunk.js.map",
     "runtime-main.js": "/my-introduction/static/js/runtime-main.461692a1.js",
     "runtime-main.js.map": "/my-introduction/static/js/runtime-main.461692a1.js.map",
     "static/js/2.4283f21f.chunk.js": "/my-introduction/static/js/2.4283f21f.chunk.js",
     "static/js/2.4283f21f.chunk.js.map": "/my-introduction/static/js/2.4283f21f.chunk.js.map",
     "index.html": "/my-introduction/index.html",
-    "precache-manifest.39fc656567fca3ec061f4bc75851fda4.js": "/my-introduction/precache-manifest.39fc656567fca3ec061f4bc75851fda4.js",
+    "precache-manifest.ca2f005e76c916ef09058d726e0d1106.js": "/my-introduction/precache-manifest.ca2f005e76c916ef09058d726e0d1106.js",
     "service-worker.js": "/my-introduction/service-worker.js",
-    "static/css/main.29d49adb.chunk.css.map": "/my-introduction/static/css/main.29d49adb.chunk.css.map",
+    "static/css/main.354e0f70.chunk.css.map": "/my-introduction/static/css/main.354e0f70.chunk.css.map",
     "static/js/2.4283f21f.chunk.js.LICENSE.txt": "/my-introduction/static/js/2.4283f21f.chunk.js.LICENSE.txt",
     "static/media/about-me.styles.scss": "/my-introduction/static/media/bg-about-me.023ab602.jpg",
     "static/media/opening.styles.scss": "/my-introduction/static/media/bg-alt.094b60ab.jpg",
-    "static/media/development.styles.scss": "/my-introduction/static/media/bg-development.00051dbb.jpg",
+    "static/media/development.styles.scss": "/my-introduction/static/media/bg-development.35f8f6a6.jpg",
     "static/media/bg-video-smoke.mp4": "/my-introduction/static/media/bg-video-smoke.42288649.mp4",
+    "static/media/guitar.jpg": "/my-introduction/static/media/guitar.8d698417.jpg",
     "static/media/gym.jpg": "/my-introduction/static/media/gym.50eb1bc9.jpg",
     "static/media/logo.svg": "/my-introduction/static/media/logo.5d5d9eef.svg",
     "static/media/my-portrait.png": "/my-introduction/static/media/my-portrait.f88d863e.png",
@@ -26,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.461692a1.js",
     "static/js/2.4283f21f.chunk.js",
-    "static/css/main.29d49adb.chunk.css",
-    "static/js/main.ae9488bc.chunk.js"
+    "static/css/main.354e0f70.chunk.css",
+    "static/js/main.075f22bf.chunk.js"
   ]
 }
