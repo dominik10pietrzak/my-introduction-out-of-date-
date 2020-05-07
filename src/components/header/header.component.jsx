@@ -8,14 +8,18 @@ import screen from "../../assets/web-pink.png";
 
 let isActive = false;
 
-const scrollToSection = section => {
+const scrollToSection = (section) => {
   let isChrome = false;
   if (window.chrome && !window.opr) {
     isChrome = true;
   }
 
   if (isChrome) {
-    $("html, body").animate({ scrollTop: $(section).offset().top }, 0, "swing");
+    $("html, body").animate(
+      { scrollTop: $(section).offset().top },
+      750,
+      "swing"
+    );
   } else {
     $("html, body").animate(
       { scrollTop: $(section).offset().top },

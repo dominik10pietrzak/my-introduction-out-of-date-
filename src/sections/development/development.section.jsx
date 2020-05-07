@@ -89,8 +89,8 @@ class Development extends Component {
                 <p className="text">
                   Oprócz tego oczywiście cały czas rozwijam umiejętności
                   wymienione w sekcji wyżej, w przyszłości planuję znacznie
-                  poszerzyć swój wachlarz umiejętności wiele technologii, takich
-                  jak np. Python czy Angular.
+                  poszerzyć swój wachlarz umiejętności o wiele technologii,
+                  takich jak np. Python czy Angular.
                 </p>
               </div>
             </div>
