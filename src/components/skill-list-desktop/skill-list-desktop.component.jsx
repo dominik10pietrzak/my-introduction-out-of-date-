@@ -39,7 +39,7 @@ class SkillListDesktop extends Component {
       false
     );
 
-    skill.addEventListener("mousemove", e => {
+    skill.addEventListener("mousemove", (e) => {
       mouseX = e.pageX - container.offsetLeft;
       mouseX2 = Math.min(Math.max(0, mouseX - mPadd), mmAA) * mmAAr;
 
@@ -66,6 +66,7 @@ class SkillListDesktop extends Component {
           <Skill data={data.sass} />
           <Skill data={data.git} />
           <Skill data={data.eng} />
+          <Skill data={data.adobe} />
         </div>
       </div>
     );

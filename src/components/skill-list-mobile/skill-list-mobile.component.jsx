@@ -8,7 +8,7 @@ class SkillListMobile extends Component {
     super(props);
 
     this.state = {
-      currentSkills: 0
+      currentSkills: 0,
     };
   }
 
@@ -35,11 +35,11 @@ class SkillListMobile extends Component {
     if (this.state.currentSkills === 0) {
       previous.classList.remove("inactive");
     }
-    if (this.state.currentSkills === 5) {
+    if (this.state.currentSkills === 6) {
       next.classList.add("inactive");
     }
 
-    if (this.state.currentSkills < 6) {
+    if (this.state.currentSkills < 7) {
       this.setState({ currentSkills: this.state.currentSkills + 1 });
     }
   };
@@ -71,7 +71,8 @@ class SkillListMobile extends Component {
       data.react,
       data.sass,
       data.git,
-      data.eng
+      data.eng,
+      data.adobe,
     ];
     return (
       <div className="skill-list-mobile">
