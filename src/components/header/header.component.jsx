@@ -4,8 +4,6 @@ import "./header.styles.scss";
 import "hamburgers";
 import $ from "jquery";
 
-import screen from "../../assets/web-pink.png";
-
 let isActive = false;
 
 const scrollToSection = (section) => {
@@ -44,14 +42,16 @@ const handleMenuClick = () => {
 
   if (isActive) {
     document.querySelector("html").style.overflowY = "hidden";
+    document.querySelector("body").style.overflowY = "hidden";
+
     for (let i = 0; i < listElements.length; i++) {
       setTimeout(() => {
         listElements[i].style.opacity = "1";
       }, i * 75);
     }
-    window.scrollTo(0, 0);
   } else if (!isActive) {
     document.querySelector("html").style.overflowY = "scroll";
+    document.querySelector("body").style.overflowY = "scroll";
     for (let i = 0; i < listElements.length; i++) {
       setTimeout(() => {
         listElements[i].style.opacity = "0";
@@ -67,27 +67,15 @@ const Header = () => {
         <h1>
           <span className="main-color">Dominik</span> Pietrzak
         </h1>
-        <img src={screen} alt="screen" />
       </div>
       <ul className="menu-list">
-        <li
-          className="main-color"
-          onClick={scrollToSection.bind(this, ".opening")}
-        >
-          Home
-        </li>
         <li onClick={scrollToSection.bind(this, ".about-me")}>O mnie</li>
         <li onClick={scrollToSection.bind(this, ".my-skills")}>Umiejętności</li>
         <li onClick={scrollToSection.bind(this, ".development")}>Rozwój</li>
         <li onClick={scrollToSection.bind(this, ".my-interests")}>
           Zainteresowania
         </li>
-        <li
-          className="main-color-background"
-          onClick={scrollToSection.bind(this, ".contact")}
-        >
-          Kontakt
-        </li>
+        <li onClick={scrollToSection.bind(this, ".contact")}>Kontakt</li>
       </ul>
       <button
         class="hamburger hamburger--emphatic"

@@ -6,9 +6,10 @@ const Skill = ({ data }) => {
   return (
     <div className="skill">
       <div className="top">
-        <img src={data.imageUrl} alt="image" className="logo" />
+        <div className="image">
+          <i className={`${data.imageClass} logo`}></i>
+        </div>
       </div>
-      {/* <div className="line"></div> */}
       <div className="bottom">
         <h1 className="title">{data.name.toUpperCase()}</h1>
         <p className="text">{data.description}</p>

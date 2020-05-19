@@ -3,99 +3,138 @@ $main-color: #6c7b95;
 
 .development {
   width: 100%;
-  padding: 2rem 10rem;
+  padding: 5rem 0;
   position: relative;
-  background-color: $main-color;
   color: white;
+  background: url("../../assets/bg-development.jpg");
+  background-position: center;
+  background-size: cover;
 
-  .background {
+  &::after {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
     left: 0;
-    object-fit: cover;
-    background-image: url("../../assets/bg-development.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    filter: grayscale(1) brightness(0.2);
-    opacity: 0.5;
+    top: 0;
+    background-color: #262729;
+    opacity: 0.95;
   }
 
   * {
+    z-index: 2;
+  }
+
+  .strip {
     z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 4.5rem;
+    width: 35rem;
   }
 
   .content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1;
+    width: 100%;
 
-    .headline {
-      width: fit-content;
-      padding: 1rem;
-      padding: {
-        left: 0;
-        top: 0;
+    .heading {
+      width: 14rem;
+      margin: auto;
+
+      .headline {
+        color: white;
+        font-size: 0.8rem;
+        z-index: 1;
+        margin: 0;
       }
-      border-bottom: solid 2px white;
-      font-size: 1.2rem;
-      color: white;
-      z-index: 1;
+
+      p {
+        color: lightgray;
+        font-size: 0.6rem;
+        margin: 1rem 0;
+      }
+
+      .button {
+        color: white;
+        background-color: rgb(54, 157, 241);
+        font-size: 0.6rem;
+        padding: 0.2rem 1.1rem;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: black;
+        }
+      }
     }
 
     .about-learning {
-      width: 20rem;
       margin: 2rem;
-      font-size: 0.55rem;
+      font-size: 0.5rem;
       text-align: center;
     }
 
     .new-skills {
-      width: 100%;
-      margin: 2rem 0;
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: auto auto;
+      align-self: flex-end;
+      display: flex;
+      padding-right: 0.5rem;
 
       #node,
-      #photoshop {
-        transform: translate(-600px);
-        opacity: 0;
-      }
-
       #redux,
-      #growth {
-        transform: translate(600px);
+      #photoshop {
+        transform: translateY(300px);
         opacity: 0;
       }
 
       .box {
-        width: 22rem;
+        width: 10rem;
+        height: 10rem;
         display: flex;
-        align-items: center;
-        transition: all 0.75s ease;
-        margin: 2rem 0;
+        flex-direction: column;
+        transition: all 0.5s ease;
+        margin: 0.5rem 0.25rem;
+        padding: 1rem;
+        background-color: rgb(238, 245, 250);
+        background-color: #fff;
+        border-radius: 0.3rem;
 
-        img {
-          height: auto;
-          width: 3rem;
-          margin: 0 2rem;
-          filter: brightness(0) invert(1);
+        .top {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            display: flex;
+            height: 1.25rem;
+            width: auto;
+            filter: brightness(0);
+          }
+
+          .name {
+            font-size: 0.7rem;
+            color: rgb(54, 157, 241);
+          }
         }
 
         .description {
-          width: 20rem;
-          .name {
-            font-size: 0.8rem;
-            color: white;
-          }
+          width: 100%;
 
           .text {
+            margin: 0;
             font-size: 0.5rem;
-            line-height: 0.8rem;
+            text-align: center;
+            color: gray;
           }
+        }
+
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-50px) !important;
         }
       }
     }
@@ -104,27 +143,19 @@ $main-color: #6c7b95;
 
 @media only screen and (max-width: 1600px) and (max-height: 900px) {
   .development {
-    padding: 2rem 8rem;
-
-    .content .new-skills .box {
-      width: 18rem;
-
-      img {
-        height: 2.5rem;
+    .strip {
+      width: 33.5rem;
+    }
+    .content {
+      .heading {
+        width: 11rem;
+      }
+      .new-skills .box {
+        img {
+          height: 2.25rem;
+        }
       }
     }
-  }
-}
-
-@media only screen and (max-width: 1440px) and (max-height: 900px) {
-  .development {
-    padding: 2rem 6rem;
-  }
-}
-
-@media only screen and (max-width: 1280px) and (max-height: 800px) {
-  .development {
-    padding: 2rem 5rem;
   }
 }
 
@@ -133,78 +164,35 @@ $main-color: #6c7b95;
     padding: 2rem;
     height: auto;
 
-    .content {
-      .new-skills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        .box {
-          width: 100%;
-          justify-content: center;
-          margin: 1.25rem 0;
-
-          .description {
-            margin: 0 1rem;
-
-            .name {
-              font-size: 0.7rem;
-              color: white;
-            }
-
-            .text {
-              width: 20rem;
-              font-size: 0.5rem;
-              line-height: 0.8rem;
-            }
-          }
-
-          img {
-            width: 3.5rem;
-            height: auto;
-            margin: 0 1.5rem;
-          }
-        }
-      }
+    .strip {
+      // transform: rotate(-90deg);
     }
-  }
-}
-
-@media only screen and (max-width: 768px) and (max-height: 1024px) {
-  .development {
-    padding: 1rem 2rem;
-    height: auto;
 
     .content {
+      .heading {
+        width: 15rem;
+      }
       .new-skills {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+
+        #node,
+        #redux,
+        #photoshop {
+          transform: translateX(300px);
+          opacity: 0;
+        }
+
         .box {
-          width: 100%;
           justify-content: center;
-          margin: 1.25rem 0;
+          margin: 0.75rem 0;
 
           .description {
-            margin: 0 1rem;
-
             .name {
               font-size: 0.7rem;
               color: white;
             }
-
-            .text {
-              width: 20rem;
-              font-size: 0.53rem;
-              line-height: 0.8rem;
-            }
-          }
-
-          img {
-            width: 3.5rem;
-            height: auto;
-            margin: 0 1rem;
           }
         }
       }
@@ -214,43 +202,62 @@ $main-color: #6c7b95;
 
 @media only screen and (max-width: 414px) and (max-height: 823px) {
   .development {
-    padding: 1rem;
-
-    .background {
-      background-attachment: initial;
-      background-position: center;
+    padding: 2rem 1rem;
+    .strip {
+      top: 2rem;
+      height: 9rem;
+      display: none;
     }
-
     .content {
-      .headline {
-        font-size: 0.9rem;
-        padding-bottom: 0.75rem;
-        border-width: 1px;
+      flex-direction: column;
+
+      .heading {
+        width: auto;
+        margin: 1rem 0;
+        text-align: center;
+        padding: 0 1rem;
+
+        .headline {
+          color: rgb(54, 157, 241);
+          font-size: 1rem;
+          display: none;
+        }
+
+        p {
+          color: white;
+        }
+      }
+
+      .button {
+        display: none;
       }
 
       .new-skills {
+        width: 100%;
         .box {
-          flex-direction: column;
-          align-content: center;
-          justify-content: center;
           width: 100%;
-          margin: 1.5rem 0;
+          height: auto;
+          background-color: transparent;
 
-          .description {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+          &:hover {
+            transform: translateY(0) !important;
+          }
 
-            .text {
-              width: 100%;
-              text-align: center;
+          .top {
+            .name {
+              font-size: 0.9rem;
+            }
+            img {
+              height: 3rem;
+              filter: brightness(0) invert(1);
             }
           }
 
-          img {
-            width: 3rem;
+          .description {
+            .text {
+              font-size: 0.6rem;
+              color: lightgray;
+            }
           }
         }
       }

@@ -1,12 +1,14 @@
 html {
+  height: 100%;
+  position: relative;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 body {
-  font-family: "Barlow", sans-serif;
-  width: 100%;
+  font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  // height: 100%;
+  // position: relative;
 
   * {
     box-sizing: border-box;
@@ -41,7 +43,7 @@ body {
 
 @media only screen and (max-width: 414px) and (max-height: 823px) {
   :root {
-    font-size: 24px;
+    font-size: 25px;
   }
 }
 

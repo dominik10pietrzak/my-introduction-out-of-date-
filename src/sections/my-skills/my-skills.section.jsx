@@ -3,6 +3,8 @@ import "./my-skills.styles.scss";
 
 import SKILLS_DATA from "./skill.data";
 
+import corner from "../../assets/corner-gradient.png";
+
 import SkillListDesktop from "../../components/skill-list-desktop/skill-list-desktop.component";
 import SkillListMobile from "../../components/skill-list-mobile/skill-list-mobile.component";
 
@@ -10,7 +12,7 @@ class MySkills extends Component {
   state = {
     skills: SKILLS_DATA,
     windowWidth: "",
-    windowHeight: ""
+    windowHeight: "",
   };
 
   componentDidMount = () => {
@@ -30,7 +32,7 @@ class MySkills extends Component {
     window.setInterval(() => {
       this.setState({
         windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight
+        windowHeight: window.innerHeight,
       });
     }, 50);
   };
@@ -38,6 +40,7 @@ class MySkills extends Component {
   render() {
     return (
       <section className="my-skills">
+        <img src={corner} className="corner" />
         <h1 className="headline">Co umiem</h1>
         <p className="about-skills">
           Jak już wspomniałem wyżej programowaniem zajmuję się od dłuższego

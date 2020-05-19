@@ -13,18 +13,6 @@ class SkillListDesktop extends Component {
   componentDidMount = () => {
     let container = document.querySelector(".skill-list-desktop");
     let skill = document.querySelector(".list");
-    let containerWidth = container.offsetWidth;
-    let blSW = container.scrollWidth;
-    let wDiff = blSW / containerWidth - 1; // widths difference ratio
-    let mPadd = 60; // Mousemove Padding
-    let damp = 2; // Mousemove response softness
-    let mouseX = 0; // Real mouse position
-    let mouseX2 = 0; // Modified mouse position
-    let posX = 0;
-    let mmAA = containerWidth - mPadd * 2; // The mousemove available area
-    let mmAAr = containerWidth / mmAA; // get available mousemove fidderence ratio
-
-    skill.style.left = `calc(-${containerWidth / 4}px - 5.5rem)`;
 
     window.addEventListener(
       "scroll",
@@ -39,25 +27,56 @@ class SkillListDesktop extends Component {
       false
     );
 
-    skill.addEventListener("mousemove", (e) => {
-      mouseX = e.pageX - container.offsetLeft;
-      mouseX2 = Math.min(Math.max(0, mouseX - mPadd), mmAA) * mmAAr;
+    const skills = document.querySelectorAll(".skill");
 
-      const sliding = setInterval(() => {
-        posX += (mouseX2 - posX) / damp; // zeno's paradox equation "catching delay"
-        skill.style.left = `${Math.round(-posX * wDiff)}px`;
-      }, 15);
-    });
+    for (let i = 4; i < 8; ++i) {
+      skills[i].classList.add("hidden-bottom");
+      skills[i].style.display = "none";
+    }
   };
 
-  componentWillUnmount = () => {
-    window.clearInterval(this.sliding);
+  handleNext = () => {
+    const skills = document.querySelectorAll(".skill");
+
+    for (let i = 0; i < 4; ++i) {
+      skills[i + 4].style.display = "block";
+      setTimeout(() => {
+        skills[i].classList.add("hidden-top");
+        skills[i + 4].classList.remove("hidden-bottom");
+      }, i * 50);
+      skills[i].style.display = "none";
+    }
+
+    const arrows = document.querySelectorAll(".arrow");
+    arrows[0].classList.toggle("inactive");
+    arrows[1].classList.toggle("inactive");
+  };
+
+  handlePrevious = () => {
+    const skills = document.querySelectorAll(".skill");
+
+    for (let i = 0; i < 4; ++i) {
+      skills[i].style.display = "block";
+      setTimeout(() => {
+        skills[i].classList.remove("hidden-top");
+        skills[i + 4].classList.add("hidden-bottom");
+      }, i * 50);
+      skills[i + 4].style.display = "none";
+    }
+
+    const arrows = document.querySelectorAll(".arrow");
+    arrows[0].classList.toggle("inactive");
+    arrows[1].classList.toggle("inactive");
   };
 
   render() {
     const { data } = this.props;
     return (
       <div className="skill-list-desktop">
+        <i
+          class="fas fa-chevron-left arrow inactive"
+          onClick={this.handlePrevious}
+        ></i>
         <div className="list  fade-in-down">
           <Skill data={data.html} />
           <Skill data={data.css} />
@@ -68,6 +87,7 @@ class SkillListDesktop extends Component {
           <Skill data={data.eng} />
           <Skill data={data.adobe} />
         </div>
+        <i class="fas fa-chevron-right arrow" onClick={this.handleNext}></i>
       </div>
     );
   }

@@ -1,44 +1,48 @@
 import React, { Component } from "react";
 import "./about-me.styles.scss";
 
-import myPhoto from "../../assets/my-portrait.png";
-import doc from "../../assets/document.png";
+import $ from "jquery";
+
+import D from "../../assets/D.png";
+import P from "../../assets/P.png";
 
 class AboutMe extends Component {
-  componentDidMount = () => {
-    const image = document.querySelector(".my-photo");
+  componentDidMount = () => {};
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY - window.innerHeight + 500 > image.offsetTop) {
-        image.style.transform = "none";
-        image.style.opacity = "1";
-      }
-    });
+  handleClick = () => {
+    $("html, body").animate(
+      { scrollTop: $(".my-skills").offset().top },
+      750,
+      "swing"
+    );
   };
 
   render() {
     return (
       <section className="about-me">
-        <div className="background"></div>
-        <h1 className="headline">Kim jestem</h1>
         <div className="content">
           <div className="description">
-            <img src={doc} alt="portrait" className="my-photo" />
             <div>
-              <h4>Dzień dobry!</h4>
-              <p className="text">
-                Nazywam się Dominik Pietrzak, mam 21 lat i szukam pracy jako
-                Junior Front-End Developer. Jestem osobą ambitną, szalenie
-                chętną do nauki i rozwoju. Cały czas poszerzam swoją wiedzę oraz
-                wachlarz umiejętności.
-                <br /> <br />
-                Programowania zacząłem się uczyć już kilka lat temu, swoje
-                pierwsze kroki stawiałem w C++. Pierwszym językiem, który
-                poznałem dość dobrze i dzięki któremu naprawdę zacząłem rozumieć
-                programowanie była Java. Front-Endu uczę się od mniej więcej 1.5
-                roku.
+              <h4>O mnie</h4>
+              <p className="simple-info">
+                <span>
+                  Dominik Pietrzak,<span className="special">21</span>
+                </span>
               </p>
+              <p className="text">
+                Szukam pracy na stanowisku Junior Front-End Developera. Jestem
+                osobą ambitną, szalenie chętną do nauki i rozwoju. Programowania
+                uczę się już kilka lat, a moja przygoda z front-endem zaczęła
+                się około 1.5 roku temu.
+              </p>
+              <span className="button" onClick={this.handleClick}>
+                Przejdź dalej
+              </span>
             </div>
+          </div>
+          <div className="letters">
+            <img src={D} />
+            <img src={P} />
           </div>
         </div>
       </section>
