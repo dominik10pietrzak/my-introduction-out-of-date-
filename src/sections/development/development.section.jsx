@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import "./development.styles.scss";
 
 import node from "../../assets/node.png";
-import redux from "../../assets/redux.png";
 import bulb from "../../assets/bulb.png";
+import typescript from "../../assets/typescript.png";
+
 import growth from "../../assets/increase.png";
 
 import strip from "../../assets/strip.png";
@@ -64,21 +65,19 @@ class Development extends Component {
               </div>
               <div className="description">
                 <p className="text">
-                  Kilka tygodni temu uznałem, że najwyższy czas zacząć się
-                  trochę interesować Backend'em i postanowiłem zacząć uczyć się
-                  NodeJS.
+                  Kilka tygodni temu uznałem, że najwyższy czas zainteresować
+                  się trochę backend'em i postanowiłem zacząć uczyć się NodeJS.
                 </p>
               </div>
             </div>
             <div className="box" id="redux">
               <div className="top">
-                <img src={redux} alt="redux" />
-                <h1 className="name">Redux</h1>
+                <img src={typescript} alt="typescript" />
+                <h1 className="name">Typescript</h1>
               </div>
               <div className="description">
                 <p className="text">
-                  Reduxa uczę się raczej przy okazji, korzystam z niego gdy
-                  wymaga tego sytuacja, nie poświęcam mu za dużo czasu.
+                  Typescript zacząłem poznawać dopiero kilka dni temu.
                 </p>
               </div>
             </div>

@@ -11,7 +11,7 @@ const SKILL_DATA = {
   html: {
     name: "html",
     description:
-      "Od HTML i\xA0CSS zacząłem (chyba z\xA0resztą jak każdy) swoją przygodę z\xA0Frond-Endem. Pierwszą styczność z\xA0nimi miałem w\xA0liceum, a\xA0poważniej zainteresowałem się tym tematem mniej więcej 2\xA0lata temu. ",
+      "Od HTML i\xA0CSS zacząłem (chyba z\xA0resztą jak każdy) swoją przygodę z\xA0Frond-Endem. Pierwszą styczność z\xA0nimi miałem w\xA0liceum, a\xA0poważniej zainteresowałem się tym tematem mniej więcej 1.5\xA0roku temu. ",
     imageUrl: html,
     imageClass: "fab fa-html5",
     color: "#E44D26",
@@ -19,7 +19,7 @@ const SKILL_DATA = {
   css: {
     name: "css",
     description:
-      "Naukę zacząłem od kursów internetowych i\xA0własnych projektów, mam za sobą także 4-miesięczny staż w\xA0firmie bcweb, tam zaczałem też uczyć się Javascript. ",
+      "Naukę zacząłem od kursów internetowych i\xA0własnych projektów. Narzędzie to cały czas zaskakuje mnie tym jak wiele niesamowitych rzeczy można za jego pomocą stworzyć.",
     imageUrl: css,
     imageClass: "fab fa-css3-alt",
     color: "#3C99DC",
@@ -27,7 +27,7 @@ const SKILL_DATA = {
   javascript: {
     name: "javascript",
     description:
-      "Javascriptu zacząłem uczyć się 1.5 roku temu, naukę tego języka znacząco ułatwiła mi całkiem dobra znajomość Javy. Przerobiłem różne kursy internetowe, ale najwięcej wiedzy przyswoiłem z\xA0nauki przez praktykę, czyli projekty.",
+      "Javascriptu zacząłem uczyć się rok temu, naukę tego języka znacząco ułatwiła mi całkiem dobra znajomość Javy. Przerobiłem różne kursy internetowe, jednak najwięcej wiedzy przyswoiłem tworząc własne aplikacje.",
     imageUrl: javascript,
     imageClass: "fab fa-js",
     color: "#F0DB4F",
@@ -35,7 +35,7 @@ const SKILL_DATA = {
   react: {
     name: "react",
     description:
-      "React'owi obecnie poświęcam najwięcej czasu, uczę się go od mniej więcej pół roku. Tak samo jak JS uczę się go z\xA0kursów internetowych oraz przede wszystkim podczas robienia własnych projektów.",
+      "React'owi obecnie poświęcam najwięcej czasu, uczę się go od mniej więcej 7 miesięcy. Zacząłem naukę od kursów internetowych, a obecnie tworzę za jego pomocą strony internetowe.",
     imageUrl: react,
     imageClass: "fab fa-react",
     color: "#61DBFB",
@@ -51,7 +51,7 @@ const SKILL_DATA = {
   eng: {
     name: "angielski",
     description:
-      "Posługiwanie się językiem angielskim nigdy nie sprawiało mi problemów, rozumiem go dobrze, także ze słuchu. Programowania też uczyłem się w dużej mierze z anglojęzycznych źródeł m.in. z\xA0dokumentacji.",
+      "Posługiwanie się językiem angielskim nigdy nie sprawiało mi problemów, rozumiem go dobrze, także ze słuchu. Programowania też uczyłem się w większości z anglojęzycznych źródeł m.in. z\xA0dokumentacji.",
     imageUrl: eng,
     imageClass: "far fa-comments",
     color: "#CF081F",
