@@ -28,14 +28,14 @@ class Development extends Component {
           setTimeout(() => {
             redux.style.opacity = "1";
             redux.style.transform = "none";
-          }, 250);
+          }, 150);
         }
 
         if (window.scrollY - window.innerHeight - 900 > photoshop.offsetTop) {
           setTimeout(() => {
             photoshop.style.opacity = "1";
             photoshop.style.transform = "none";
-          }, 500);
+          }, 300);
         }
       },
       false
