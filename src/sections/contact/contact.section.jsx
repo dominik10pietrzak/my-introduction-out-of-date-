@@ -64,6 +64,15 @@ class Contact extends Component {
                 }}
               ></i>
             </div>
+            <div className="contact-form">
+              <i
+                class="fab fa-github-square"
+                onClick={() =>
+                  (window.location.href =
+                    "https://github.com/dominik10pietrzak")
+                }
+              ></i>
+            </div>
           </div>
         </div>
         <div className="right">
@@ -83,7 +92,9 @@ class Contact extends Component {
             <i class="far fa-envelope"></i>{" "}
             <p id="email-to-copy">d.pietrzak516@op.pl</p>
           </div>
-          <p className="copyright">&copy; 2020 Dominik Pietrzak</p>
+          <p className="copyright">
+            <span>&copy;</span>2020 Dominik Pietrzak
+          </p>
         </div>
       </section>
     );
