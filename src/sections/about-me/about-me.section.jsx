@@ -30,10 +30,11 @@ class AboutMe extends Component {
                 </span>
               </p>
               <p className="text">
-                Szukam pracy na stanowisku Junior Front-End Developera. Jestem
-                osobą ambitną, szalenie chętną do nauki i rozwoju. Programowania
-                uczę się już kilka lat, a moja przygoda z front-endem zaczęła
-                się około 1.5 roku temu.
+                Szukam pracy na stanowisku Junior Frontend Developera. Jestem
+                osobą pracowitą i ambitną, nie spóźniam się na ustaloną godzinę
+                i nie boję się wziąć na siebie odpowiedzialności. Programowanie
+                to nie tylko zajęcie z którym wiążę swoją przyszłość zawodową,
+                ale także pasja którą pielęgnuję od ponad 2 lat.
               </p>
               <span className="button" onClick={this.handleClick}>
                 Przejdź dalej

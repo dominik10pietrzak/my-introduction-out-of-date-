@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./development.styles.scss";
 
-import node from "../../assets/node.png";
+import python from "../../assets/python.png";
 import bulb from "../../assets/bulb.png";
 import typescript from "../../assets/typescript.png";
 
@@ -28,14 +28,14 @@ class Development extends Component {
           setTimeout(() => {
             redux.style.opacity = "1";
             redux.style.transform = "none";
-          }, 150);
+          }, 75);
         }
 
         if (window.scrollY - window.innerHeight - 900 > photoshop.offsetTop) {
           setTimeout(() => {
             photoshop.style.opacity = "1";
             photoshop.style.transform = "none";
-          }, 300);
+          }, 150);
         }
       },
       false
@@ -60,13 +60,14 @@ class Development extends Component {
           <div className="new-skills">
             <div className="box" id="node">
               <div className="top">
-                <img src={node} alt="node" />
-                <h1 className="name">NodeJS</h1>
+                <img src={python} alt="node" />
+                <h1 className="name">Python (Django)</h1>
               </div>
               <div className="description">
                 <p className="text">
                   Kilka tygodni temu uznałem, że najwyższy czas zainteresować
-                  się trochę backend'em i postanowiłem zacząć uczyć się NodeJS.
+                  się trochę backend'em i postanowiłem zacząć uczyć się Pythona,
+                  a mianowicie jego webowego frameworka Django.
                 </p>
               </div>
             </div>
