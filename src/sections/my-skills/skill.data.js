@@ -3,7 +3,7 @@ import css from "../../assets/css3.png";
 import javascript from "../../assets/js.png";
 import react from "../../assets/react.png";
 import git from "../../assets/git.png";
-import sass from "../../assets/sass.png";
+import vue from "../../assets/vue.png";
 import eng from "../../assets/english.png";
 import adobe from "../../assets/adobe.png";
 
@@ -17,7 +17,7 @@ const SKILL_DATA = {
     color: "#E44D26",
   },
   css: {
-    name: "css",
+    name: "css (sass)",
     description:
       "Naukę zacząłem od kursów internetowych i\xA0własnych projektów. Narzędzie to cały czas zaskakuje mnie tym jak wiele niesamowitych rzeczy można za jego pomocą stworzyć.",
     imageUrl: css,
@@ -35,17 +35,17 @@ const SKILL_DATA = {
   react: {
     name: "react",
     description:
-      "React'owi obecnie poświęcam najwięcej czasu, uczę się go od mniej więcej 7 miesięcy. Zacząłem naukę od kursów internetowych, a obecnie tworzę za jego pomocą strony internetowe.",
+      "Reacta uczę się już prawie rok i uważam, że poznałem go dość dobrze. Naukę zacząłem od kursów internetowych, a obecnie tworzę za jego pomocą strony internetowe.",
     imageUrl: react,
     imageClass: "fab fa-react",
     color: "#61DBFB",
   },
   sass: {
-    name: "sass",
+    name: "vue",
     description:
-      "Z\xA0SASS'em zetknąłem się mniej więcej 1.5 roku temu na wcześniej wspomnianym stażu i\xA0od tamtego czasu korzystam z\xA0niego praktycznie cały czas. Zanim zacząłem używać React App, kod SASS'a kompilowałem przy użyciu Gulpa.",
-    imageUrl: sass,
-    imageClass: "fab fa-sass",
+      "Vue uczę się od niedawna i nie umiem go (jeszcze) tak dobrze jak Reacta, ale znajomość wspomnianego wcześniej frameworka pozwala mi uczyć się Vue w zatrważającym tempie.",
+    imageUrl: vue,
+    imageClass: "fab fa-vuejs",
     color: "#CD6799",
   },
   eng: {
